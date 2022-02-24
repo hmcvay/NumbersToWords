@@ -29,5 +29,14 @@ namespace NumbersToWords.Tests
       char[] result = Numbers.SplitValue(s);
       CollectionAssert.AreEqual(arr,result);
     }
+    [TestMethod]
+    public void NumbersReverseArray_ReverseArray_Array()
+    {
+      string s = "1234";
+      char[] test = {'4','3','2','1'};
+      char[] arr = Numbers.SplitValue(s);
+      char[] result = Numbers.ReverseArray(arr);
+      CollectionAssert.AreEqual(test,result);
+    }
   }
 }

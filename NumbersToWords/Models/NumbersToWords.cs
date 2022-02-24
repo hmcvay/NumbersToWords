@@ -21,5 +21,12 @@ namespace NumbersToWords.Models
       char[] result = num.ToCharArray();
       return result;
     }
+
+    public static char[] ReverseArray(char[] splitArray)
+    {
+      char[] result = splitArray;
+      Array.Reverse(result);
+      return result;
+    }
   }
 }
