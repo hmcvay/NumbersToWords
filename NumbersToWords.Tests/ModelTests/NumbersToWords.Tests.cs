@@ -25,7 +25,7 @@ namespace NumbersToWords.Tests
     public void NumbersSplitArray_CreateArray_Array()
     {
       string s = "1234";
-      char[] arr = {'0','2','3','4'};
+      char[] arr = {'1','2','3','4'};
       char[] result = Numbers.SplitValue(s);
       CollectionAssert.AreEqual(arr,result);
     }
