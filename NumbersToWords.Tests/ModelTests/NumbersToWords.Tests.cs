@@ -14,7 +14,7 @@ namespace NumbersToWords.Tests
     public void NumbersDictionary_ReturnValue_String()
     {
       //Arrange
-      string number = "two";
+      string number = "one";
       //Act
       string dictionaryValue = Numbers.belowTwenty["1"];
       //Assert
