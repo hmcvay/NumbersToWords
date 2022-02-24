@@ -20,5 +20,14 @@ namespace NumbersToWords.Tests
       //Assert
       Assert.AreEqual(number, dictionaryValue);
     }
+    
+    [TestMethod]
+    public void NumbersSplitArray_CreateArray_Array()
+    {
+      string s = "1234";
+      char[] arr = {'0','2','3','4'};
+      char[] result = Numbers.SplitValue(s);
+      CollectionAssert.AreEqual(arr,result);
+    }
   }
 }
