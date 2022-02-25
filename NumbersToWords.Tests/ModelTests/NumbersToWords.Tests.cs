@@ -13,11 +13,8 @@ namespace NumbersToWords.Tests
 
     public void NumbersDictionary_ReturnValue_String()
     {
-      //Arrange
-      string number = "one";
-      //Act
-      string dictionaryValue = Numbers.belowTwenty["1"];
-      //Assert
+      string number = "one ";
+      string dictionaryValue = Numbers.belowTwenty['1'];
       Assert.AreEqual(number, dictionaryValue);
     }
     
@@ -37,6 +34,19 @@ namespace NumbersToWords.Tests
       char[] arr = Numbers.SplitValue(s);
       char[] result = Numbers.ReverseArray(arr);
       CollectionAssert.AreEqual(test,result);
+    }
+
+    [TestMethod]
+    public void NumbersConvertArray_ConvertArray()
+    {
+      string s = "23";
+      char[] arr = Numbers.SplitValue(s); // arr = '2', '3'
+      char[] toConvert = Numbers.ReverseArray(arr); // toConvert = '3', '2'
+      string dictionaryValue = Numbers.NumberConvert(toConvert); //dictionaryValue = "three" "twenty"
+      //!
+      // string reverseString = Numbers.ReverseString(dictionaryValue); //reverseString = "twenty three"
+      string result = "twenty three ";
+      Assert.AreEqual(dictionaryValue, result);
     }
   }
 }

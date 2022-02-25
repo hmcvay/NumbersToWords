@@ -7,3 +7,12 @@ for loop i++
 
 '4' => Dictionary => return "Four"
 "3" =>  => "Three"
+
+
+new method called convert to pass in char[]
+which will check dictionary and return value
+
+ex: char[] = "3"
+return "three"
+
+char[] = "

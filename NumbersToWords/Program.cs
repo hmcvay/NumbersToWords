@@ -11,12 +11,17 @@ namespace NumbersToWords
       Console.WriteLine("WELCOME!!");
       Console.WriteLine("This application will take a numeral and return that numeral written in words back tot he user.");
       Console.WriteLine("-------------------");
-      Console.WriteLine("Please enter the numeral you wish to convert:");
-      string response = Console.ReadLine();
-      char[] arr = Numbers.SplitValue(response);
-      foreach (char i in arr)
+      Start();
+      static void Start()
       {
-        Console.WriteLine(i);
+        Console.WriteLine("Please enter the numeral you wish to convert:");
+        string response = Console.ReadLine();
+        char[] arr = Numbers.SplitValue(response); 
+        char[] toConvert = Numbers.ReverseArray(arr); 
+        string dictionaryValue = Numbers.NumberConvert(toConvert); 
+        Console.WriteLine("You number is: " + dictionaryValue);
+        Console.WriteLine("-------------------");
+        Start();
       }
     }
   }
